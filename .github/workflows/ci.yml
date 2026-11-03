@@ -24,6 +24,14 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13'
+      - name: Install PostgreSQL 18 client tools
+        run: |
+          sudo install -d /etc/apt/keyrings
+          curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o /etc/apt/keyrings/postgresql.gpg
+          echo "deb [signed-by=/etc/apt/keyrings/postgresql.gpg] http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client-18
+          pg_dump --version
       - run: python -m pip install -r backend/requirements.lock
       - run: |
           cp .env.example .env
@@ -31,6 +39,12 @@ jobs:
           echo 'DATABASE_URL=postgresql+asyncpg://postgres:tripsync-ci@localhost:5432/postgres' >> .env
           PYTHONPATH=backend python -m app.cli init-local-key
           python backend/tests/clean_setup.py
+      - name: Display test failure log on error
+        if: failure()
+        run: |
+          if [ -f .local/pytest-failure.log ]; then
+            cat .local/pytest-failure.log
+          fi
   frontend:
     runs-on: ubuntu-latest
     defaults:
