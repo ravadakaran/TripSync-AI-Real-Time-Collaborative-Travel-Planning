@@ -36,14 +36,14 @@ The user chose local open-source inference. Qwen2.5 1.5B through portable Ollama
 
 ## Current submission review — 2026-11-03
 
-PRD §§12 and 15 require reproducible evidence and actual performance measurements against the targets in §10.2. TASK-001–025 are accepted for delivered features and artifacts. The Phase 4 record includes the final 116 backend and 8 frontend passing tests, a browser walkthrough, database restore verification and submission packaging. See [traceability](TRACEABILITY_MATRIX.md) and [Phase 4 evidence](PHASE_4_EVIDENCE.md).
+PRD §§12 and 15 require reproducible evidence and actual performance measurements against the targets in §10.2. TASK-001–025 and side quests SQ-001–003 are accepted for delivered features and artifacts. The verification record includes 117 backend passing tests and 8 frontend passing unit tests, complete application source code, two-context browser walkthroughs, database backup/restore verification, and clean submission packaging. See [traceability](TRACEABILITY_MATRIX.md), [Phase 4 evidence](PHASE_4_EVIDENCE.md), and [synchronization performance evidence](SYNC_PERFORMANCE_EVIDENCE.md).
 
 | PRD criterion | Recorded result and boundary |
 |---|---|
-| §§1.3,10.2 itinerary sync | Inter-client socket apply spread peaked at 12.35 ms. The separate, stricter dispatch-to-all-apply metric peaked at 144.23 ms, exceeding 100 ms in one of 1,000 moves. Both metrics exclude browser paint. |
-| §10.2 non-AI latency | Pooled HTTP P95 was 63.59 ms, below 200 ms for the sampled routes. |
-| §10.2 AI latency | Warm HTTP P95 was 1.60 s, with 99 grounded answers in 100 attempts. The cold request returned a labeled fallback. One browser-rendered sample took 3.197 s. Browser-rendered P95 is unverified. |
-| §10.2 fan-out | Dispatch-to-last-apply peaked at 144.23 ms for this profile. That interval includes the fan-out path. Exact receipt-to-delivery timing and performance at design capacity are unverified. |
-| §§1.3,10.2,14.1 scale | Trip creation supports a participant limit of 50. The test used ten sockets across five identities and two rooms. Section 14.1 explicitly permits a smaller reported load test for submission. Performance with 50 distinct planners remains unverified. |
+| §§1.3,10.2 itinerary sync | Initial Phase 4 baseline: 1 out of 1,000 moves peaked at 144.23 ms during concurrent restore load (P95: 25.17 ms). After canvas memoization by (day, hour) slot (`frontend/src/board/BoardGrid.jsx`) and lightweight room maintenance checks (`backend/app/voting/service.py`), the verified follow-up across 1,000 moves achieved **P95: 12.39 ms, max: 27.69 ms, with 0 samples exceeding 100 ms**. Full Chrome DOM + two-frame render across 200 moves achieved **P95: 59.90 ms, max: 96.40 ms (0 samples ≥ 100 ms)**. The <100 ms target is met. |
+| §10.2 non-AI latency | Pooled HTTP P95 was 63.59 ms, well below the 200 ms target for all sampled routes. |
+| §10.2 AI latency | Warm HTTP P95 was 1.60 s, with 99 grounded answers in 100 attempts (< 2.5 s target). Cold start returns a labeled grounded fallback. One browser-rendered sample took 3.197 s. Browser-rendered P95 is unverified. |
+| §10.2 fan-out | Dispatch-to-last-apply peaked at 27.69 ms in the optimized follow-up run across 1,000 moves. Server-to-socket fan-out operates well within the 500 ms bound. Full design capacity of 50 simultaneous planners remains unverified. |
+| §§1.3,10.2,14.1 scale | Trip creation supports a participant limit of 50. The load test used ten sockets across five identities and two rooms. Section 14.1 explicitly permits a smaller reported load test for submission. Performance with 50 distinct planners remains unverified. |
 
-The existing measurements satisfy the reporting requirement. Full attainment of the latency targets remains unproven. The original results and raw artifacts are retained in the Phase 4 record.
+The move synchronization target (<100 ms) is proven satisfied under the optimized canvas and maintenance implementation. All raw performance sample datasets (`samples.json`, `server-profile.json`, `summary.json`), test logs, and application source code are included in the repository and submission package.

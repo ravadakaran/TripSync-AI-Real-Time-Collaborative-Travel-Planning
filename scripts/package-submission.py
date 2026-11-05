@@ -7,7 +7,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
 manifest_path = 'evidence/submission-manifest.json'
-files = subprocess.check_output(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
+files = subprocess.check_output(['git', '-c', 'safe.directory=*', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
 files = sorted(set(f for f in files if f and f != manifest_path and (ROOT/f).is_file()))
 assert all(not Path(f).is_absolute() and '..' not in Path(f).parts for f in files)
 assert not any(f == '.env' or f.startswith(('.local/', '.venv/', 'frontend/node_modules/')) or f.endswith('.dump') for f in files)

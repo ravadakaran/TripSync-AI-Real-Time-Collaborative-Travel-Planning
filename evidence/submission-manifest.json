@@ -5,28 +5,52 @@
       "sha256": "084b1a615902034803b91b10041a1c5a7042dde251394b7cfb8eee67d644f543"
     },
     {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "sha256": "fbe62bfcfb0e918bebdb2e66566c5be124e5891a08017002f36ba91a18a8d226"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "sha256": "8580e69e693d3026b8385744035c2357a14d3d28187f592f658ba0aa7d9133cc"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "0d1c06c102394a4b451bff36c59687172c13968690a98973a7ef15f136cd3f1c"
+    },
+    {
       "path": ".gitignore",
-      "sha256": "d29459a70dfdef33ed3be0729ff09ea752c09c1a57c6a8551d40e9d26bc6757c"
+      "sha256": "170aa406a7e517cfb000761a3405f760b55fdfda21d6034655597cb887efced4"
     },
     {
       "path": "AGENTS.md",
       "sha256": "1c10ae43fb04a0a97957b519e2e0ebbcb59f5d8fc3f2e7d84400b590451e3918"
     },
     {
+      "path": "CHANGELOG.md",
+      "sha256": "d124f3214d332d2b0f863522e5cf466c48a5d8da497560f9c787825de9fac364"
+    },
+    {
       "path": "CONTRIBUTING.md",
-      "sha256": "2413b913849dc53715946e0cd9d3df080ea1c4e88ffccf063928dfd0649152c5"
+      "sha256": "fd7585b538770fec8816d0b3ca70788f865eeb0b7269d7a56d3f5d1b7feaf8da"
     },
     {
       "path": "DESIGN.md",
       "sha256": "0a6bec7c2d3b30b8eab66317a9a469d18285c88185fb9c9ab7c07c9f1afe9593"
     },
     {
+      "path": "Demo video/2026-11-03 19-08-00.mp4",
+      "sha256": "0fefc805890a8ebfc57b4494eb028b5115fb67749818b37360c06521606104db"
+    },
+    {
       "path": "Document/Project Document.docx",
       "sha256": "f390a137f9c9740bdc8d870840a07ec3df70fb890a3772c35ef2d5cd7beaf340"
     },
     {
+      "path": "LICENSE",
+      "sha256": "5930dca55f88093b93707e8b663a6ab7cac3630147aab7af8bea8ab6fa75a96f"
+    },
+    {
       "path": "README.md",
-      "sha256": "a811e8a498695bed29ea220421352ad8f6d31c158990d2ee4a4fad93994fe6be"
+      "sha256": "e472db47fc72ce60077038f02e27af43f46a6336f99c4b2177b2d0743edb1c9b"
     },
     {
       "path": "backend/alembic.ini",
@@ -162,7 +186,7 @@
     },
     {
       "path": "backend/app/main.py",
-      "sha256": "bf426959d8482129546569bb14b5e50fbe4a2da08b79fd6ef9c66b7eec50d4e0"
+      "sha256": "f911172fcb76eb86e6448eb24b3efea249cdb26b31579588d91e6139405cca5b"
     },
     {
       "path": "backend/app/realtime/gateway.py",
@@ -278,7 +302,7 @@
     },
     {
       "path": "backend/tests/sync_profile_server.py",
-      "sha256": "7c09b8090604dcab7779cda10c3eea4d6b51f0feb3d1e466bb44ac414d4fe6c1"
+      "sha256": "b301113811a41cbc2090323f3ec8ebf85f9a263b27dd54db52525861e14d8ccd"
     },
     {
       "path": "backend/tests/test_auth_integration.py",
@@ -458,11 +482,11 @@
     },
     {
       "path": "docs/PRD_ALIGNMENT_REVIEW.md",
-      "sha256": "5ee14704dae87e3d402514d4bbab8cc593dde69ce454ce45cfb65862a23b5760"
+      "sha256": "6ebbc04357bf0295a99ea13f6e30b91ef4c664adf35d24f5873f0ccc5aa45df4"
     },
     {
       "path": "docs/PROJECT_REQUIREMENTS.md",
-      "sha256": "8924fc8eee0ed337084d896d8480c5072f24add4d1ccbe8c92d3d04206a5cd9c"
+      "sha256": "0dce5fe64685186ab8bd4e2d7e1e9cbea27d109279531b2dbd1acdb0ca7278f2"
     },
     {
       "path": "docs/RECOMMENDATION_ENGINE.md",
@@ -477,16 +501,24 @@
       "sha256": "555144eaf86df19a2293088fbc9eb8ee30e285bcdb67af65389ae346d0429d73"
     },
     {
+      "path": "docs/SHOW_HN_DRAFT.md",
+      "sha256": "4a5023c8d0b4422308b76f896203322706797a0b3b5aabef5104680f50839670"
+    },
+    {
       "path": "docs/SUBMISSION_READINESS.md",
-      "sha256": "5b72eabc32b6bcf59202ff9b7f66c294e0a6506dd857d2191359748091cf8254"
+      "sha256": "a94d736cd7ad7d88564ad01b1a1943242a5d47195870a77fa36ab06a6c1b4c7f"
     },
     {
       "path": "docs/SYNC_PERFORMANCE_EVIDENCE.md",
-      "sha256": "e08fbcd5c18ca204fb5abce5206f74fdf4c947ef56c821454930cc76dcf89568"
+      "sha256": "1405104253f905f6b9348b039e2610720e0842167c6ad17a478f9e1c214e3f6f"
     },
     {
       "path": "docs/TASKS.md",
-      "sha256": "1424845e187cd37f2ae126b8e5ac73b1528c148168ff98f85e350dbeb4434ee1"
+      "sha256": "1fd288d4e7a7071776be1248a702b11ac1062392eab739dad0be0d1b6b6b3a1d"
+    },
+    {
+      "path": "docs/TECHNICAL_VERIFICATION_ADDENDUM.md",
+      "sha256": "a5a5b8a2d25d40a5d541f11e1e40d78e5350cfdb6409e2168b5c03682c839d07"
     },
     {
       "path": "docs/TESTING_STRATEGY.md",
@@ -498,11 +530,27 @@
     },
     {
       "path": "docs/TRACEABILITY_MATRIX.md",
-      "sha256": "78d5b87986441d11efd995fca66ace6747ed8117dc5daa18e53019c3de80cf9c"
+      "sha256": "0885b2d4941ba6c747da546da7aec4dc5d1f1847c0999bb53312bdde2c94ecfe"
     },
     {
       "path": "docs/WEBSOCKET_PROTOCOL.md",
       "sha256": "ea61d63ad4a4d052735c39c8619449cd1b866b3693a6f8bdec5a02bf3374dfb7"
+    },
+    {
+      "path": "docs/media/board.gif",
+      "sha256": "1efc180a75a1685e2a9881c2e9b5349fd26799d3f5230f9020cb22031b140cb6"
+    },
+    {
+      "path": "docs/media/social-preview.jpg",
+      "sha256": "adb4ec123d77b210d47b3e4c9b19b1c0e40d42cbe4a8dad09e34b682638b4ebb"
+    },
+    {
+      "path": "docs/media/social-preview.png",
+      "sha256": "befce1fdfaf58602c3c858c7d38f27cc902a49efd4a6306b6cab21bd675a6749"
+    },
+    {
+      "path": "docs/media/tripsync-demo.gif",
+      "sha256": "ef09cb7c86600aac1b8627fb8a77c87720983c73e6f042c72eb0e1c3057ef080"
     },
     {
       "path": "evidence/contracts/openapi.json",
@@ -518,7 +566,7 @@
     },
     {
       "path": "evidence/operations/restore.json",
-      "sha256": "90c995465e54e1551738d86563c1f31450886df8c7e59064bdef6556134b57bf"
+      "sha256": "6fc4d33e689ef41865066309694531143cf40efa76843b62299d8ce36dc3bf83"
     },
     {
       "path": "evidence/operations/submission-followup-restore.json",
@@ -738,7 +786,7 @@
     },
     {
       "path": "frontend/src/ui/format.js",
-      "sha256": "af1d6946f8fe11be04abff29eebfe1ca96055b6c8768a9264b93cf90df56eb10"
+      "sha256": "34d39ba008b03170084213fe72b510f5d83a6376a38757aa5dad38fe4d81dcfa"
     },
     {
       "path": "frontend/src/votes/PlanningPanel.jsx",
@@ -770,11 +818,15 @@
     },
     {
       "path": "scripts/package-submission.py",
-      "sha256": "f70097554a34a48fac51da12e8e37a8207aab80cab79945ebd8763750dd8059a"
+      "sha256": "156200955e70969974b9877eb1f73bcfea5a22985d472637bc88c819c3b7259b"
     },
     {
       "path": "scripts/scan-submission.py",
       "sha256": "c31883426bb3c22a9d06688a26c2c44ba1b10596fc224caaaca83a75ebfeca33"
+    },
+    {
+      "path": "scripts/setup-local.ps1",
+      "sha256": "a0bd6867fb98d653eddf0d8f3f07c952cf9a135b05189b20701daef6f57dca79"
     },
     {
       "path": "scripts/start-local-model.ps1",
