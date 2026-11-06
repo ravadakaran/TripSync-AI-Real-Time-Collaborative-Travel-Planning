@@ -59,6 +59,8 @@ Weeks: 1 foundation + thin slice; 2 board and Concierge; 3 voting/personalizatio
 
 ## Run the application
 
+New to the shared board? Follow the [two-browser walkthrough](docs/TWO_BROWSER_WALKTHROUGH.md) to create a room, join with a second account and watch one activity appear in both sessions.
+
 Follow [environment setup](docs/ENVIRONMENT_SETUP.md) to install dependencies, configure a private `.env`, migrate a disposable PostgreSQL database and start the API and React client. The documented first-slice scenario covers two accounts, room creation and joining, a shared pin, and its committed watermark. [Implementation evidence](docs/PHASE_1_EVIDENCE.md) records the actual tests, limitations and remaining acceptance work.
 
 The app is intended for local development. The historical first-slice evidence describes an earlier subset; use the Phase 3 and side quest evidence for feature coverage. Final security, performance, restore and submission results are recorded in Phase 4 evidence.
